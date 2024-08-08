@@ -7,5 +7,6 @@ router = routers.DefaultRouter()
 router.register(r'movie', MovieViewSet, basename='movie')
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls'))
 ]
