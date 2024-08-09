@@ -12,12 +12,12 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from .serializers import MovieSerializer
 from .models import MovieModel
-from rest_framework.permissions import IsAuthenticated
+
 from rest_framework import status
 from rest_framework import viewsets
 
 class MovieViewSet(viewsets.ViewSet):
-    permission_classes = [IsAuthenticated]
+    
     
     def list(self, request):
         stu = MovieModel.objects.all()
